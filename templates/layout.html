@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Flask App</title>
+      <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Inventory Management</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+    
+      <form class="register-form">
+
+        <div class="form-body">
+
+      <div class="horizontal-group">   
+        <div class="form-group left">
+        <label for="Server Name" class="label-title">ServerName:</label> 
+        <input type="text" name="Server Name" class="form-box" id="Server Name"  placeholder="Server Name" />
+        </div>
+
+        <div class="form-group right">
+        <label for="PrintQueue Name" class="label-title">PrintQueueName:</label> 
+        <input type="text" name="PrintQueue Name"class="form-box" id="PrintQueue Name" placeholder="PrintQueue Name"/>
+        </div>
+      </div>
+
+        <label for="IP Address"  class="label-title">IP Address:</label> 
+        <input type="text" name="IP Address" class="form-box" id="IP Addressing" placeholder="IP Address"/>
+
+        <!--label for="Host Name">Host Name:</label> 
+        <input type="text" name="Host Name" id="Host Name" placeholder="Host Name"/>
+        
+        <label for="Model">Model:</label> 
+        <select id="Model" name="Model">
+          <option value="Xerox WorkCentre 7855 v1">Xerox WorkCentre 7855 v1</option>
+          <option value="Xerox AltaLink C8055">Xerox AltaLink C8055</option>
+        </select>
+
+        <label for="Manufacturer">Manufacturer:</label> 
+        <select id="Manufacturer" name="Manufacturer">
+          <option value="Xerox">Xerox</option>
+          <option value="HP">HP</option>
+        </select>
+
+        <label for="Serial">Printer Serial:</label> 
+        <input type="text" name="Printer Serial" placeholder="Printer Serial"/>
+
+        <label for="Solution">Solution:</label> 
+        <select id="Solution" name="Solution">
+          <option value="Traditional">Traditional</option>
+          <option value="YSoft">YSoft</option>
+        </select>
+        
+        <label for="Addressing">Addressing:</label> 
+        <input type="radio" id="Static" name="Addressing" value="Static">
+        <label for="Static">Static</label>
+        <input type="radio" id="DHCP" name="Addressing" value="DHCP">
+        <label for="DHCP">DHCP</label>
+
+        <label for="Domain">Domain:</label> 
+        <select id="Domain" name="Domain">
+          <option value="Redmond">Redmond</option>
+          <option value="Fareast">Fareast</option>
+        </select>
+
+        <label for="Mac Address">Mac Address:</label> 
+        <input type="text" name="Mac Address" placeholder="Mac Address"/>
+
+        <label for="Firmware">Firmware:</label> 
+        <input type="text" name="Firmware" placeholder="Firmware"/>
+
+        <label for="Region">Region:</label> 
+        <select id="Region" name="Region">
+          <option value="APAC">APAC</option>
+          <option value="EMEA">EMEA</option>
+        </select>
+
+        <label for="Country">Country:</label> 
+        <input type="text" name="Country" placeholder="Country"/>
+
+        <label for="City">City:</label> 
+        <input type="text" name="City" placeholder="City"/>
+
+        <label for="Location">Location:</label> 
+        <input type="text" name="Location" placeholder="Location"/>---->
+
+        <button class="Submit">Submit</button>
+
+       </div> 
+      </form>
+    <div class="container">
+        {%block content%}
+        {%endblock%}
+    </div>
+  </body>
+</html>
